@@ -1,0 +1,299 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Velvet Bloom — Unwrap the Moment of Pure Indulgence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#4b1515; /* deep maroon */
+      --panel:#ffffff;
+      --gold:#c69b6d;
+      --gold-dark:#b8864b;
+      --muted:#d9c7c7;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Playfair Display',serif;background:var(--bg);color:var(--muted);-webkit-font-smoothing:antialiased}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:rgba(0,0,0,0.25)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:64px;width:64px;object-fit:contain;border-radius:10px;border:2px solid rgba(255,255,255,0.04)}
+    .brand h1{margin:0;font-size:20px;color:var(--panel)}
+    .tag{font-family:'Dancing Script',cursive;color:var(--gold);font-size:16px}
+    nav a{color:var(--muted);margin-left:14px;text-decoration:none;font-weight:600}
+
+    .container{max-width:1100px;margin:18px auto;padding:18px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border-radius:var(--radius);padding:22px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+    .cta{display:inline-block;padding:10px 18px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:#1b0f0f;border-radius:10px;text-decoration:none;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .product{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.05));padding:14px;border-radius:12px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    .product img{max-width:100%;height:180px;object-fit:cover;border-radius:8px}
+    .product h3{margin:8px 0 4px;color:var(--panel)}
+    .product p{margin:0;color:var(--muted);font-size:14px}
+
+    /* hero shimmer */
+    .hero-banner{background:linear-gradient(90deg, rgba(0,0,0,0.12), rgba(255,255,255,0.02));padding:30px;border-radius:12px;text-align:center;color:var(--panel);position:relative;overflow:hidden}
+    .hero-banner h2{font-family:'Dancing Script',cursive;font-size:36px;margin:6px}
+    .shimmer{position:absolute;left:-40%;top:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);transform:skewX(-20deg);animation:shimmer 3s linear infinite}
+    @keyframes shimmer{to{left:140%}}
+
+    .panel{background:var(--panel);color:#1b0f0f;padding:12px;border-radius:10px}
+    footer{padding:18px;text-align:center;color:var(--muted);background:rgba(0,0,0,0.2);margin-top:26px}
+
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.brand h1{font-size:16px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/logo.png" alt="Velvet Bloom Logo">
+      <div>
+        <h1>Velvet Bloom</h1>
+        <div class="tag">Unwrap the Moment of Pure Indulgence</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#scanner">Try On</a>
+      <a href="#quiz">Skin Quiz</a>
+      <a href="#custom">Customize</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card hero-banner">
+        <div class="shimmer" aria-hidden="true"></div>
+        <img src="images/logo.png" alt="Logo" style="height:120px;display:block;margin:8px auto">
+        <h2>Unwrap the Moment of Pure Indulgence</h2>
+        <p style="color:var(--muted);max-width:520px;margin:8px auto">Velvet Bloom — luxurious cosmetic gift hampers curated with love. Explore blushes, lip glosses, body mists and delicate jewelry accents.</p>
+        <div style="margin-top:12px">
+          <a class="cta" href="#products">Shop Now</a>
+        </div>
+      </div>
+
+      <aside class="hero-card panel">
+        <h3 style="margin-top:0">Gift Basket Preview</h3>
+        <p style="color:#555">Choose a basket, add a message, and personalize the ribbon.</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px">
+          <img src="images/blush.jpg" style="width:100%;height:90px;object-fit:cover;border-radius:8px">
+          <img src="images/body_mist.jpg" style="width:100%;height:90px;object-fit:cover;border-radius:8px">
+          <img src="images/lip_gloss.jpg" style="width:100%;height:90px;object-fit:cover;border-radius:8px">
+          <img src="images/blush.jpg" style="width:100%;height:90px;object-fit:cover;border-radius:8px">
+          <img src="images/body_mist.jpg" style="width:100%;height:90px;object-fit:cover;border-radius:8px">
+        </div>
+        <div style="margin-top:10px">
+          <label style="display:block;color:#333">Custom message:</label>
+          <textarea id="giftNote" rows="3" style="width:100%;padding:8px;border-radius:8px;border:1px solid #eee"></textarea>
+          <div style="margin-top:8px">Add Gift Card: <input id="giftName" placeholder="To: ..." style="padding:6px;border-radius:8px;border:1px solid #eee"></div>
+          <button onclick="addToCart('Gift Basket',4500,{images:['images/blush.jpg']})" style="margin-top:10px;padding:10px 12px;border-radius:8px;background:var(--gold);color:#1b0f0f;border:none">Add Basket (Demo)</button>
+        </div>
+      </aside>
+    </section>
+
+    <section id="products" style="margin-top:20px">
+      <h2 style="color:var(--panel)">Featured</h2>
+      <div class="grid">
+        <div class="product">
+          <img src="images/body_mist.jpg" alt="Body Mist">
+          <h3>Velvet Bloom — Body Mist</h3>
+          <p>Floral & velvet blends. Multiple flavors available.</p>
+          <p style="font-weight:700;color:var(--gold)">$25.00</p>
+          <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
+            <button onclick="addToCart('Body Mist — Rose Petal',2500,{images:['images/body_mist.jpg']})" style="padding:8px 10px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Add (Demo)</button>
+            <button onclick="addToCart('Body Mist — Vanilla Dream',2500,{images:['images/body_mist.jpg']})" style="padding:8px 10px;border-radius:8px;border:1px solid var(--gold);color:var(--panel);background:transparent">Vanilla</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/blush.jpg" alt="Blush">
+          <h3>Velvet Bloom — Blush</h3>
+          <p>Silky, buildable pigment — choose a tint preview.</p>
+          <p style="font-weight:700;color:var(--gold)">$18.00</p>
+          <div style="margin-top:8px" id="blushSwatches">
+            <div style="display:flex;gap:8px;justify-content:center">
+              <div onclick="selectShade('blush','Rose Glow','#f2b0b0')" title="Rose Glow" style="width:36px;height:36px;border-radius:50%;background:#f2b0b0;border:2px solid #fff;cursor:pointer"></div>
+              <div onclick="selectShade('blush','Peach Bloom','#ffd0b3')" title="Peach Bloom" style="width:36px;height:36px;border-radius:50%;background:#ffd0b3;border:2px solid #fff;cursor:pointer"></div>
+              <div onclick="selectShade('blush','Berry Flush','#cf7b8b')" title="Berry Flush" style="width:36px;height:36px;border-radius:50%;background:#cf7b8b;border:2px solid #fff;cursor:pointer"></div>
+            </div>
+          </div>
+          <div style="margin-top:10px">
+            <button onclick="addToCart('Blush — Rose Glow',1800,{images:['images/blush.jpg']})" style="padding:8px 10px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Add (Demo)</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/lip_gloss.jpg" alt="Lip Gloss">
+          <h3>Velvet Bloom — Lip Gloss</h3>
+          <p>High-shine gloss with tint options.</p>
+          <p style="font-weight:700;color:var(--gold)">$15.00</p>
+          <div style="margin-top:8px" id="glossSwatches">
+            <div style="display:flex;gap:8px;justify-content:center">
+              <div onclick="selectShade('gloss','Nude Whisper','#f8a2c2')" title="Nude Whisper" style="width:36px;height:36px;border-radius:50%;background:#f8a2c2;border:2px solid #fff;cursor:pointer"></div>
+              <div onclick="selectShade('gloss','Cherry Veil','#ff7fa1')" title="Cherry Veil" style="width:36px;height:36px;border-radius:50%;background:#ff7fa1;border:2px solid #fff;cursor:pointer"></div>
+              <div onclick="selectShade('gloss','Crystal Shine','#d95f8f')" title="Crystal Shine" style="width:36px;height:36px;border-radius:50%;background:#d95f8f;border:2px solid #fff;cursor:pointer"></div>
+            </div>
+          </div>
+          <div style="margin-top:10px">
+            <button onclick="addToCart('Lip Gloss — Nude Whisper',1500,{images:['images/lip_gloss.jpg']})" style="padding:8px 10px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Add (Demo)</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/logo.png" alt="Jewelry">
+          <h3>Delicate Jewelry Accents</h3>
+          <p>Gold-tone necklaces & bracelets to pair with gifts.</p>
+          <p style="font-weight:700;color:var(--gold)">$30.00</p>
+          <div style="margin-top:10px">
+            <button onclick="addToCart('Jewelry Accent',3000,{images:['images/logo.png']})" style="padding:8px 10px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Add (Demo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scanner" style="margin-top:26px" class="panel">
+      <h2 style="margin-top:0;color:#333">AI Face Tint Scanner — Try your shade</h2>
+      <p style="color:#444">This runs in your browser only (no uploads by default). Use your camera or upload a photo to sample a small skin area. We'll suggest the best blush & gloss.</p>
+
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:280px" class="panel">
+          <div style="display:flex;gap:8px;justify-content:center;margin-bottom:8px">
+            <button onclick="startCam()" style="padding:8px 10px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Start Camera</button>
+            <button onclick="stopCam()" style="padding:8px 10px;border-radius:8px;border:1px solid var(--gold);background:transparent;color:#333">Stop</button>
+            <label style="border:1px dashed #ddd;padding:8px;border-radius:8px;cursor:pointer;color:#333">
+              Upload Photo <input onchange="handleUpload(event)" type="file" accept="image/*" style="display:none">
+            </label>
+            <button onclick="captureSample()" style="padding:8px 10px;border-radius:8px;background:var(--gold);color:#1b0f0f;border:none">Capture Sample</button>
+          </div>
+
+          <video id="video" autoplay playsinline width="340" height="255" style="background:#f6f0f0;border-radius:8px"></video>
+          <canvas id="cap" width="340" height="255" style="display:none"></canvas>
+
+          <div id="scannerResult" style="margin-top:10px;padding:10px;border-radius:8px;background:#fff;min-height:72px;color:#111">
+            <strong>Detected:</strong> <span id="detectedHex">—</span>
+            <div style="margin-top:8px" id="suggestions"></div>
+          </div>
+        </div>
+
+        <div style="width:320px" class="panel">
+          <h4 style="margin:0;color:#333">Live Preview</h4>
+          <div style="position:relative;border-radius:10px;overflow:hidden;background:#fff;margin-top:8px">
+            <img id="previewImg" src="images/blush.jpg" alt="preview" style="width:100%;height:260px;object-fit:cover">
+            <div id="overlay" style="position:absolute;left:0;top:0;right:0;bottom:0;mix-blend-mode:overlay;pointer-events:none"></div>
+          </div>
+          <p style="color:#666;margin-top:8px">Click a suggestion to preview on the image and add to cart.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" style="margin-top:26px" class="panel">
+      <h2 style="margin-top:0;color:#333">Quick Skin Quiz</h2>
+      <p style="color:#444">Answer 4 quick questions and we'll recommend a perfect product combo + gift basket.</p>
+
+      <form id="skinQuizForm" style="margin-top:12px" onsubmit="quizSubmit(event)">
+        <label style="display:block;color:#333;margin-bottom:6px">How does your skin react to sun?
+          <select id="q1"><option value="burns">I burn easily</option><option value="tans">I tan</option><option value="rare">Rarely burn</option></select>
+        </label>
+        <label style="display:block;color:#333;margin-bottom:6px">Undertone?
+          <select id="q2"><option value="cool">Cool (pink/blue)</option><option value="warm">Warm (yellow/golden)</option><option value="neutral">Neutral</option></select>
+        </label>
+        <label style="display:block;color:#333;margin-bottom:6px">Skin type?
+          <select id="q3"><option value="oily">Oily</option><option value="dry">Dry</option><option value="combo">Combination</option></select>
+        </label>
+        <label style="display:block;color:#333;margin-bottom:6px">Occasion?
+          <select id="q4"><option value="everyday">Everyday</option><option value="glam">Glam Night</option><option value="gift">Gift</option></select>
+        </label>
+
+        <div style="margin-top:10px">
+          <button type="submit" style="padding:8px 10px;border-radius:8px;background:var(--gold);color:#1b0f0f;border:none">Get Recommendation</button>
+        </div>
+      </form>
+
+      <div id="quizRec" style="margin-top:12px;color:#111"></div>
+    </section>
+
+    <section id="cartSection" style="margin-top:26px" class="panel">
+      <h2 style="margin-top:0;color:#333">Your Cart (Demo)</h2>
+      <div id="cartArea" style="color:#111"></div>
+      <div style="margin-top:12px">
+        <button onclick="demoCheckout()" style="padding:10px 14px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Proceed to Checkout (Demo)</button>
+      </div>
+    </section>
+
+    <section id="custom" style="margin-top:26px" class="panel">
+      <h2 style="margin-top:0;color:#333">Customize Gift Card</h2>
+      <input id="cardTo" placeholder="To:" style="width:100%;padding:8px;margin-bottom:8px">
+      <textarea id="cardMsg" placeholder="Write a short message..." rows="4" style="width:100%;padding:8px"></textarea>
+      <div style="margin-top:8px"><button onclick="generateCard()" style="padding:8px 10px;border-radius:8px;background:var(--gold);color:#1b0f0f;border:none">Preview Card</button></div>
+      <div id="cardPreview" style="margin-top:10px"></div>
+    </section>
+
+    <section id="contact" style="margin-top:26px" class="panel">
+      <h2 style="margin-top:0;color:#333">Contact & Follow</h2>
+      <p>Email: <a href="mailto:velvet_bloom@gmail.com">velvet_bloom@gmail.com</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/shop_velvetbloom._?igsh=MXhqMGV5ZmozbmxyNQ==" target="_blank">@shop_velvetbloom._</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <img src="images/logo.png" alt="logo" style="height:48px;margin-bottom:6px">
+    <div style="font-size:13px;color:var(--muted)">&copy; Velvet Bloom — Unwrap the Moment of Pure Indulgence</div>
+  </footer>
+
+  <script>
+    // Simple demo cart (no payments)
+    let cart = [];
+    function addToCart(name, amount, extra={}) {
+      const existing = cart.find(i=>i.name===name);
+      if(existing) existing.quantity++;
+      else cart.push(Object.assign({name,amount,quantity:1,currency:'usd'}, extra));
+      renderCart();
+      window.scrollTo({top:document.getElementById('cartSection').offsetTop-20,behavior:'smooth'});
+    }
+    function removeItem(name){ cart = cart.filter(i=>i.name!==name); renderCart(); }
+    function renderCart(){
+      const el = document.getElementById('cartArea');
+      if(cart.length===0){ el.innerHTML = '<p style="color:#666">Cart is empty.</p>'; return; }
+      let total=0; let html = '<table style="width:100%;border-collapse:collapse;color:#111"><tr><th style="text-align:left">Item</th><th>Qty</th><th style="text-align:right">Price</th><th></th></tr>';
+      cart.forEach(i=>{
+        const rowTotal = i.amount * i.quantity;
+        total += rowTotal;
+        html += `<tr style="border-top:1px solid #eee"><td>${i.name}</td><td style="text-align:center">${i.quantity}</td><td style="text-align:right">$${(rowTotal/100).toFixed(2)}</td><td style="text-align:center"><button onclick="removeItem('${i.name}')" style="background:none;border:none;color:#c0392b;cursor:pointer">Remove</button></td></tr>`;
+      });
+      html += `</table><div style="text-align:right;margin-top:8px;font-weight:700">Total: $${(total/100).toFixed(2)}</div>`;
+      el.innerHTML = html;
+    }
+    function demoCheckout(){ alert('This is a demo site. Checkout is disabled. Please deploy with Stripe or other payment provider to accept payments.'); }
+
+    // Gift card preview
+    function generateCard(){ const to=document.getElementById('cardTo').value||'Friend'; const msg=document.getElementById('cardMsg').value||'With love, Velvet Bloom'; document.getElementById('cardPreview').innerHTML=`<div style="border-radius:10px;padding:12px;background:#fff;color:#111"><h3 style="margin:0">To: ${escapeHtml(to)}</h3><p>${escapeHtml(msg)}</p></div>`; }
+    function escapeHtml(s){return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');}
+
+    // Shade selection preview
+    function selectShade(kind,name,hex){ document.getElementById('overlay').style.background = hexToRgba(hex,0.35); document.getElementById('detectedHex').innerText = `${name} (${hex})`; }
+    function hexToRgba(hex,a){ if(hex.startsWith('#')) hex=hex.slice(1); const r=parseInt(hex.slice(0,2),16), g=parseInt(hex.slice(2,4),16), b=parseInt(hex.slice(4,6),16); return `rgba(${r},${g},${b},${a})`; }
+
+    // Simple AI tint scanner (camera + upload)
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('cap');
+    const ctx = canvas.getContext('2d');
+    let streamRef = null;
+    async function startCam(){ try{ streamRef = await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'}}); video.srcObject = streamRef; }catch(err){ alert('Camera not available or permission denied. Use photo upload instead.'); console.warn(err); } }
+    function stopCam(){ if(streamRef){ streamRef.getTracks().forEach(t=>t.stop()); streamRef=null; video.srcObject=null; } }
+    function handleUpload(e){ const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload=function(ev){ document.getElementById('previewImg').src=ev.target.result; const img=new Image(); img.onload=function(){ canvas.width=340; canvas.height=255; ctx.drawImage(img,0,0,canvas.width,canvas.height); analyzeSampleFromCanvas(); } ; img.src=ev.target.result; }; reader.readAsDataURL(file); }
+    function captureSample(){ if(video.srcObject){ ctx.drawImage(video,0,0,canvas.width,canvas.height); analyzeSampleFromCanvas(); document.getElementById('previewImg').src = canvas.toDataURL('image/jpeg'); } else { analyzeSampleFromCanvas(); } }
+    function analyzeSampleFromCanvas(){ const w=canvas.width,h=canvas.height; const cx=Math.floor(w/2), cy=Math.floor(h/2); let r=0,g=0,b=0,count=0; for(let dx=-6;dx<=6;dx++){ for(let dy=-6;dy<=6;dy++){ const x=cx+dx,y=cy+dy; if(x<0||y<0||x>=w||y>=h) continue; const d = ctx.getImageData(x,y,1,1).data; r+=d[0]; g+=d[1]; b+=d[2]; count++; } } if(count===0) return; r=Math.round(r/count); g=Math.round(g/count); b=Math.round(b/count); const hex=rgbToHex(r,g,b); document.getElementById('detectedHex').innerText = hex; suggestShadesFromRgb(r,g,b); }
+    function rgbToHex(r,g,b){ return '#'+[r,g,b].map(x=>x.toString(16).padStart(2,'0')).join(''); }
+    function suggestShadesFromRgb(r,g,b){ const luminance=(0.2126*r+0.7152*g+0.0722*b)/255; const rgRatio = r/Math.max(1,g); let blush='Rose Glow', blushHex='#f2b0b0', gloss='Nude Whisper', glossHex='#f8a2c2', basket='Self-Care Hamper'; if(rgRatio>1.08 && luminance>0.6){ blush='Peach Bloom'; blushHex='#ffd0b3'; gloss='Nude Whisper'; glossHex='#f8a2c2'; basket='Bright Morning Hamper'; }else if(rgRatio<0.95 && luminance>0.5){ blush='Rose Glow'; blushHex='#f2b0b0'; gloss='Crystal Shine'; glossHex='#d95f8f'; basket='Dewy Glow Hamper'; }else if(luminance<0.45){ blush='Berry Flush'; blushHex='#cf7b8b'; gloss='Cherry Veil'; glossHex='#ff7fa1'; basket='Velvet Evening Hamper'; } const sEl=document.getElementById('suggestions'); sEl.innerHTML = `<div style="display:flex;gap:10px;align-items:center"><div style="text-align:left"><div><strong>Blush:</strong> ${blush}</div><div><strong>Gloss:</strong> ${gloss}</div><div style="margin-top:6px"><strong>Suggested Basket:</strong> ${basket}</div></div><div style="display:flex;flex-direction:column;gap:6px;margin-left:auto"><button onclick="previewShade('${blushHex}','${glossHex}','${blush}','${gloss}','${basket}')" style="padding:6px 8px;border-radius:8px;background:var(--gold-dark);color:#fff;border:none">Preview</button><button onclick="addSuggestedToCart('${blush}',${1800},'${blushHex}','${gloss}',${1500},'${glossHex}','${basket}')" style="padding:6px 8px;border-radius:8px;background:var(--gold);color:#fff;border:none">Add All to Cart</button></div></div>`; }
+    function previewShade(blushHex,glossHex,blushName,glossName,basketName){ document.getElementById('overlay').style.background = hexToRgba(blushHex,0.35); document.getElementById('detectedHex').innerText = `${blushName} & ${glossName} suggested`; }
+    function addSuggestedToCart(blushName,blushAmt,blushHex,glossName,glossAmt,glossHex,basketName){ addToCart(`${blushName}`,blushAmt,{images:['images/blush.jpg']}); addToCart(`${glossName}`,glossAmt,{images:['images/lip_gloss.jpg']}); addToCart(`${basketName}`,4500,{images:['images/blush.jpg']}); alert('Suggested items added to demo cart.'); }
+    function quizSubmit(e){ e.preventDefault(); const q1=document.getElementById('q1').value; const q2=document.getElementById('q2').value; const q3=document.getElementById('q3').value; const q4=document.getElementById('q4').value; let blush='Rose Glow', blushHex='#f2b0b0', gloss='Nude Whisper', glossHex='#f8a2c2', basket='Self-Care Hamper'; if(q2==='warm'){ blush='Peach Bloom'; blushHex='#ffd0b3'; gloss='Nude Whisper'; glossHex='#f8a2c2'; } if(q2==='cool'){ blush='Rose Glow'; blushHex='#f2b0b0'; gloss='Crystal Shine'; glossHex='#d95f8f'; } if(q3==='dry'){ gloss='Crystal Shine'; glossHex='#d95f8f'; } if(q4==='glam'){ blush='Berry Flush'; blushHex='#cf7b8b'; gloss='Cherry Veil'; glossHex='#ff7fa1'; basket='Velvet Evening Hamper'; } if(q4==='gift'){ basket='Perfect Gift Hamper'; } const recDiv=document.getElementById('quizRec'); recDiv.innerHTML = `<div style="display:flex;gap:12px;align-items:center"><div><div><strong>Suggested Blush:</strong> ${blush}</div><div><strong>Suggested Gloss:</strong> ${gloss}</div><div style="margin-top:6px"><strong>Recommended Basket:</strong> ${basket}</div><div style="margin-top:8px"><button onclick="addSuggestedToCart('${blush}',1800,'${blushHex}','${gloss}',1500,'${glossHex}','${basket}')" style="padding:8px 10px;border-radius:8px;background:var(--gold);color:#1b0f0f;border:none">Add All to Cart</button></div></div><div style="width:90px;height:90px;border-radius:10px;background:${blushHex};box-shadow:inset 0 0 8px rgba(0,0,0,0.08)"></div></div>`; window.scrollTo({top:recDiv.offsetTop-20,behavior:'smooth'}); }
+    document.addEventListener('DOMContentLoaded',()=>{ renderCart(); canvas.width=340; canvas.height=255; });
+  </script>
+</body>
+</html>
